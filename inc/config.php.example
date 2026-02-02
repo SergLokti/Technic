@@ -1,0 +1,56 @@
+<?php
+/**
+ * =====================================================
+ * ШАБЛОН НАСТРОЕК TECHNIC
+ * =====================================================
+ * 
+ * УСТАНОВКА:
+ * 1. Скопируйте этот файл:
+ *    cp inc/config.php.example inc/config.php
+ * 
+ * 2. Отредактируйте inc/config.php:
+ *    nano inc/config.php
+ * 
+ * 3. Заполните настройки вашей инфраструктуры
+ * 
+ * 4. Проверьте права доступа:
+ *    chmod 600 inc/config.php
+ *    chown www-data:www-data inc/config.php
+ * =====================================================
+ */
+
+if (!defined('GLPI_ROOT')) {
+   die("Sorry. You can't access this file directly");
+}
+
+return [
+   
+   // ========================================
+   // LDAP / ACTIVE DIRECTORY
+   // ========================================
+   
+   // Основной контроллер домена
+   'ldap_host' => 'dc01.your-domain.com',
+   
+   // Резервный контроллер
+   'ldap_host_a' => 'dc02.your-domain.com',
+   
+   // Учетная запись для bind
+   'auth_user' => 'DOMAIN\glpi-service',
+   
+   // Пароль для LDAP
+   'auth_pass' => 'YOUR_LDAP_PASSWORD',
+   
+   
+   // ========================================
+   // SCCM / POWERSHELL
+   // ========================================
+   
+   // Логин для PowerShell модуля
+   'sccm_user' => 'glpi',
+   
+   // Пароль для PowerShell
+   'sccm_pass' => 'YOUR_SCCM_PASSWORD',
+   
+];
+?>
