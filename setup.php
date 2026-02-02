@@ -9,12 +9,12 @@
  * - LDAP (добавление/удаление из групп AD)
  * - SCCM (установка ПО через коллекции)
  * - PowerShell (архивация почты)
- * - Согласования (владельцы активов)
+ * - Согласования (c владельцами активов)
  * 
  * СОВМЕСТИМОСТЬ: ТОЛЬКО GLPI 10.x
  * 
- * АВТОР: AI + User
- * ДАТА: 02.02.2026
+ * АВТОР: Sergey Loktionov
+ * ДАТА: 01.02.2026
  * =====================================================
  */
 
@@ -89,7 +89,7 @@ function plugin_version_technic() {
    return [
       'name'           => 'Technic',
       'version'        => '1.0.0',
-      'author'         => 'AI + User',
+      'author'         => 'Sergey Loktionov',
       'license'        => 'GPLv2+',
       'homepage'       => '',
       'requirements'   => [
@@ -97,9 +97,6 @@ function plugin_version_technic() {
             'min' => '10.0.0',   // Минимум GLPI 10.0.0
             'max' => '10.0.99'   // Максимум GLPI 10.0.x
          ],
-         'php' => [
-            'min' => '7.4.0'     // PHP 7.4+ (для match expression)
-         ]
       ]
    ];
 }
@@ -126,4 +123,5 @@ function plugin_init_technic() {
    // Автозагрузка классов плагина
    Plugin::registerClass('PluginTechnicCron');
 }
+
 ?>
