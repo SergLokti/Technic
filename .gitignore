@@ -1,0 +1,17 @@
+# Конфигурация с паролями
+inc/config.php
+
+# Временные файлы
+*.log
+*.tmp
+*.swp
+*~
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# OS
+.DS_Store
+Thumbs.db
